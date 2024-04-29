@@ -2,7 +2,7 @@
 
 The storinfo service is a Manta V2 service that provides an interface for retrieving a cached view of the contents of the `manta_storage` bucket via the /poll REST endpoint.  The Rebalancer is the only current consumer of storinfo.  Future versions of buckets-api will be modified to consume the storinfo service.
 
-A draft RFD describing the motivation, requirements and approach for manta-storinfo is [here](https://github.com/joyent/rfd/tree/master/rfd/0170).  The Storinfo API is documented [here](https://github.com/joyent/manta-storinfo/blob/master/docs/index.md)
+A draft RFD describing the motivation, requirements and approach for manta-storinfo is [here](https://github.com/TritonDataCenter/rfd/tree/master/rfd/0170).  The Storinfo API is documented [here](https://github.com/TritonDataCenter/manta-storinfo/blob/master/docs/index.md)
 
 
 ## Manually Deployment Procedure
@@ -15,7 +15,7 @@ Images built from the master branch of manta-storinfo are available in the ```de
 
 ```
 # storinfo_image=$(updates-imgadm -C <channel> list name=mantav2-storinfo --latest -H -o uuid)
-# sdc-imgadm import -S https://updates.joyent.com $storinfo_image
+# sdc-imgadm import -S https://updates.tritondatacenter.com $storinfo_image
 ```
 
 Set `channel` to `dev` to install the most recent image built from master.  Set `channel` to `experimental` to pick up images built from a development branch.
@@ -40,9 +40,9 @@ Export the current manta topology to JSON**
 
 ## Development
 
-The resulting image will be posted to updates.joyent.com. The image will be available on the `experimental` channel when building a development branch, or the `dev` channel when building the `master` branch.
+The resulting image will be posted to updates.tritondatacenter.com. The image will be available on the `experimental` channel when building a development branch, or the `dev` channel when building the `master` branch.
 
-To build storinfo locally, follow the [standard build instructions for Manta/Triton components](https://github.com/joyent/triton/blob/master/docs/developer-guide/building.md). If you already have a development zone available, run:
+To build storinfo locally, follow the [standard build instructions for Manta/Triton components](https://github.com/TritonDataCenter/triton/blob/master/docs/developer-guide/building.md). If you already have a development zone available, run:
 
 `make buildimage`
 
