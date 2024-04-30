@@ -1,8 +1,8 @@
 {
   "name": "storinfo",
   "description": "Manta Storage Info Service",
-  "version": "1.0.0",
-  "author": "Joyent (joyent.com)",
+  "version": "1.0.1",
+  "author": "MNX Cloud (mnx.io)",
   "private": true,
   "repository": {
     "type": "git",
